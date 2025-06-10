@@ -1,17 +1,13 @@
 from fastapi import FastAPI
 import requests
 from openai import OpenAI
-client = OpenAI(api_key="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"
-)
-
+client = OpenAI(api_key= SECRET_ID)
 
 app = FastAPI()
 
 @app.get("/")
 def root():
-    return "hello worlds"
- 
-
+    return "hello worlds"       
 
 @app.post("/items/")
 async def create_item(item):
