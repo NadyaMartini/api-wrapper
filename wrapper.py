@@ -1,7 +1,13 @@
 from fastapi import FastAPI
 import requests
 from openai import OpenAI
+import os
+SECRET_ID = os.environ.get('SECRET_ID')
+
 client = OpenAI(api_key= SECRET_ID)
+
+
+
 
 app = FastAPI()
 
